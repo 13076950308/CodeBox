@@ -1,7 +1,0 @@
-test_vip:
-  test_vip_001:
-    keyword: "hello"
-    except: "邀请码输入不正确"
-  test_vip_002:
-    keyword: ""
-    except: "请填写邀请码"

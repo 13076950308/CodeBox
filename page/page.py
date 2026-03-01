@@ -1,6 +1,7 @@
-from page.people_page import PeoplePage
-from page.quick_contact_activity_page import QuickContactActivityPage
-from page.compact_contact_editor_page import CompactContactEditorPage
+from page.home_page import HomePage
+from page.login_page import LoginPage
+from page.me_page import MePage
+from page.register_page import RegisterPage
 
 
 class Page:
@@ -8,13 +9,17 @@ class Page:
         self.driver = driver
 
     @property
-    def people_activity(self):
-        return PeoplePage(self.driver)
+    def home(self):
+        return HomePage(self.driver)
 
     @property
-    def compact_contact_editor_activity(self):
-        return CompactContactEditorPage(self.driver)
+    def login(self):
+        return LoginPage(self.driver)
 
     @property
-    def quick_contact_activity(self):
-        return QuickContactActivityPage(self.driver)
+    def register(self):
+        return RegisterPage(self.driver)
+
+    @property
+    def me(self):
+        return MePage(self.driver)

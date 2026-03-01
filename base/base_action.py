@@ -8,7 +8,7 @@ class BaseAction:
     def __init__(self, driver):
         self.driver = driver
 
-    def base_find_element(self, feature, timeout=30, poll=0.5):
+    def base_find_element(self, feature, timeout=30, poll=1.0):
         """
         根据特征，找元素
         :param feature: 特征
@@ -52,9 +52,9 @@ class BaseAction:
     # 判断toast是否存在
     def base_estimate_toast_exist(self, message):
         """
-        根据部分内容判断message是否存在
+        根据部分内容判断toast是否存在
         :param message:部分内容
-        :return:
+        :return:是否存在
         """
         message_xpath = By.XPATH, "//*[contains(text, '%s')]" % message
         try:
