@@ -1,0 +1,13 @@
+test_contact:
+  test_contact_001:
+    name: "刘永超"
+    phone_number: 18798018193
+    toast: "已保存刘永超"
+  test_contact_002:
+    name: "李晨"
+    phone_number: 18798018230
+    toast: "已保存李晨"
+  test_contact_003:
+    name: "李霖"
+    phone_number: 18798018115
+    toast: "已保存李霖"
