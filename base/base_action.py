@@ -76,6 +76,14 @@ class BaseAction:
         else:
             raise Exception('toast未出现，请检查参数是否正确或toast有没有出现在屏幕上')
 
+    # 判断某个元素是否存在
+    def base_is_feature_exist(self,feature):
+        try:
+            self.base_find_elements(feature)
+            return True
+        except TimeoutException:
+            return False
+
     def scroll_page_one_time(self, direction="up"):
         """
         滑动一次屏幕
@@ -135,8 +143,8 @@ class BaseAction:
 
     def is_keyword_in_page_source(self, keyword, time_out=10, poll=0.1):
         """
-        如果keyword在pagesuorce中返回true
-        如果keyword不在pagesuorce中返回False
+        如果keyword在pagesuorce中那么返回true
+        如果keyword不在pagesuorce中那么返回False
         :param keyword: 字符串
         :param time_out: 超时时间，默认为10秒
         :param poll: 频率，默认为0.1秒
@@ -166,3 +174,5 @@ class BaseAction:
     # 按下回车键
     def base_press_enter(self):
         self.driver.press_keycode(66)
+
+
